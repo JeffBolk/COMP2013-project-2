@@ -94,6 +94,17 @@
   padding: 5px;
 }
 
+.updateForm {
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 100%;
+  justify-content: center;
+  /*width: 300px;
+  margin: 30px auto 30px 25px;
+  padding: 10px 20px 20px 20px;
+  border: 2px solid wheat;
+  border-radius: 10px;*/
+}
 .ProductQuantityDiv {
   display: flex;
   justify-content: space-between;

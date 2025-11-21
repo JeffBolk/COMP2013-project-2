@@ -1,3 +1,4 @@
+// Sample JSON data
 const products = [
   {
     id: "3017620422003",
@@ -19,7 +20,7 @@ const products = [
   },
   {
     id: "3033490004521",
-    productName: "Yougurt",
+    productName: "Yogurt",
     brand: "Danone",
     quantity: "500 g",
     image:
@@ -28,7 +29,7 @@ const products = [
   },
   {
     id: "20267605",
-    productName: "Cashaws",
+    productName: "Cashews",
     brand: "Lidl",
     quantity: "200 g",
     image:
@@ -118,7 +119,7 @@ const products = [
   },
   {
     id: "4014400400007",
-    productName: "Toffifee",
+    productName: "Toffee",
     brand: "Storck",
     quantity: "125 g",
     image:

@@ -11,11 +11,11 @@ export default function CartContainer({
       <h2>Cart items: {cartList.length}</h2>
       {cartList.length > 0 ? (
         <>
-          {console.log(cartList)}
           {cartList.map((product) => (
             <CartCard
               key={product.id}
               {...product}
+              _id={product._id}
               handleRemoveFromCart={handleRemoveFromCart}
               handleAddQuantity={handleAddQuantity}
               handleRemoveQuantity={handleRemoveQuantity}

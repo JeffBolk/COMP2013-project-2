@@ -1,6 +1,7 @@
 import QuantityCounter from "./QuantityCounter";
 
 export default function CartCard({
+  _id,
   id,
   image,
   productName,
@@ -17,13 +18,13 @@ export default function CartCard({
         <p>{productName}</p>
         <p>{price}</p>
         <QuantityCounter
-          id={id}
+          // Choose proper id
+          id={id !== undefined ? id : _id}
           productQuantity={quantity}
           handleAddQuantity={handleAddQuantity}
           handleRemoveQuantity={handleRemoveQuantity}
           mode="cart"
         />
-        {/* <h3>x {quantity}</h3> */}
       </div>
 
       <div>

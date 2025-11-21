@@ -1,24 +1,31 @@
 import ProductCard from "./ProductCard";
 
 export default function ProductsContainer({
-  products,
+  productData,
   handleAddQuantity,
   handleRemoveQuantity,
   handleAddToCart,
   productQuantity,
+  handleDelete,
+  handleEdit,
 }) {
   return (
     <div className="ProductsContainer">
-      {products.map((product) => (
+      {productData.map((product) => (
         <ProductCard
           key={product.id}
-          {...product}
           handleAddQuantity={handleAddQuantity}
           handleRemoveQuantity={handleRemoveQuantity}
           handleAddToCart={handleAddToCart}
           productQuantity={
-            productQuantity.find((p) => p.id === product.id).quantity
+            // Copilot Assisted Bug Fix (Use ternary to pass a value)
+            productQuantity?.find(
+              (p) => p.id === product._id || p.id === product.id
+            )?.quantity ?? 0
           }
+          handleDelete={handleDelete}
+          handleEdit={handleEdit}
+          product={product}
         />
       ))}
     </div>
